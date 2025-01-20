@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ProductCSS.css'; 
+import './Productstyle.css';
 
 function ProductCard({ product, addToCart }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
