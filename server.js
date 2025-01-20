@@ -12,7 +12,7 @@ connectDB();
 // CORS configuration
 const corsOptions = {
     origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    methods: ['GET', 'POST', 'PUT', 'PATCH','DELETE'], 
     credentials: true, 
   };
   
