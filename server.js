@@ -11,12 +11,16 @@ const app= express();
 connectDB();
 // CORS configuration
 const corsOptions = {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'PATCH','DELETE'], 
-    credentials: true, 
-  };
-  
-  app.use(cors(corsOptions));
+    origin: '*', // Restrict this in production
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(bodyParser.json());
 
