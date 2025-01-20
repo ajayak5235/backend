@@ -9,7 +9,15 @@ const { errorHandler } = require('./middleware/errorHandler');
 
 const app= express();
 connectDB();
-app.use(cors())
+// CORS configuration
+const corsOptions = {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true, 
+  };
+  
+  app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Routes
