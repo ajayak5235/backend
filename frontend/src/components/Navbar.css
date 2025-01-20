@@ -1,0 +1,92 @@
+/* Navbar.css */
+.navbar {
+    background-color: rgb(86, 83, 83);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the navbar */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+  }
+  
+  .navbar h1 {
+    color: #fb0606;
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-link {
+    color: #64f30c;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #f0a500;
+  }
+  
+  .nav-item button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+      position: absolute;
+      top: 60px; 
+      right: 20px;
+      background-color: rgb(86, 83, 83);
+      border-radius: 5px;
+      padding: 10px;
+    }
+  
+    .nav-list.show {
+      display: flex;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .navbar-toggle {
+      display: none;
+    }
+  }
+  
