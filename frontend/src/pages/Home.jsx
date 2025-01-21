@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -85,7 +85,7 @@ function Home() {
       <section className="cta">
         <h2>Start Shopping Now</h2>
         <p>Discover our wide range of products and unbeatable deals.</p>
-        <a href="/products" className="cta-button">Shop All Products</a>
+        <Link to="/products" className="cta-button">Shop All Products</Link>
       </section>
     </div>
   );
