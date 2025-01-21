@@ -47,7 +47,7 @@ function Cart() {
         
       const token = localStorage.getItem('token');
       await fetch(`${BASE_URL}/api/cart/increase/${productId}`, {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
