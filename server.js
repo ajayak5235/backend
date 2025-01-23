@@ -10,17 +10,17 @@ const { errorHandler } = require('./middleware/errorHandler');
 const app= express();
 connectDB();
 // CORS configuration
-const corsOptions = {
-    origin: '*', 
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-};
+// const corsOptions = {
+//     origin: '*', 
+//     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Handle preflight requests
-app.options('*', cors(corsOptions));
+// app.options('*', cors(corsOptions));
 
 app.use(bodyParser.json());
 
